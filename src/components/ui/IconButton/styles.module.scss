@@ -1,0 +1,32 @@
+.button {
+  background-color: var(--button-background);
+  color: var(--button-color);
+  border: 1px solid var(--button-border);
+  border-radius: var(--button-border-radius);
+  height: var(--button-width);
+  width: var(--button-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 150ms ease-in-out;
+
+  &.md {
+    --button-border-radius: var(--rounded-md);
+    --button-width: 2rem;
+    --button-height: 2rem;
+  }
+
+  &.secondary {
+    --button-background: var(--neutral-700);
+    --button-border: var(--neutral-600);
+    --button-color: #848d97;
+
+    &:hover {
+      --button-background: #292e36;
+    }
+
+    &:focus {
+      outline: 2px solid var(--blue-500);
+    }
+  }
+}

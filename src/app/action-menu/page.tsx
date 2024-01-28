@@ -1,7 +1,11 @@
-import styles from './styles.module.scss'
+import { ActionMenu } from '@/components/ui/ActionMenu';
 
-type ActionMenuProps = {}
+type ActionMenuProps = {};
 
 export default function ActionMenuPage() {
-  return <div>ActionMenu</div>
+  return (
+    <ActionMenu.Root>
+      <ActionMenu.Trigger type="icon" />
+    </ActionMenu.Root>
+  );
 }

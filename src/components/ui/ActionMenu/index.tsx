@@ -1,3 +1,7 @@
-export default function ActionsMenu() {
-  return <div>ActionsMenu</div>;
-}
+import { ActionMenuRoot } from './ActionMenuRoot';
+import { ActionMenuTrigger } from './ActionMenuTrigger';
+
+export const ActionMenu = {
+  Root: ActionMenuRoot,
+  Trigger: ActionMenuTrigger,
+};
