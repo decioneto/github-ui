@@ -1,17 +1,11 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import styles from './styles.module.scss';
 import { MENU_ITEMS } from './useMenu';
 import { usePathname } from 'next/navigation';
+import styles from './styles.module.scss';
 
 export function Menu() {
-  const [menu, setMenu] = useState<string>();
   const pathname = usePathname();
-
-  useEffect(() => {
-    setMenu(pathname);
-  }, [pathname]);
 
   return (
     <div className={styles.menu}>
@@ -20,7 +14,7 @@ export function Menu() {
           <li key={item.href}>
             <a
               href={item.href}
-              className={item.href === menu ? styles.active : ''}
+              className={item.href === pathname ? styles.active : ''}
             >
               {item.name}
             </a>
