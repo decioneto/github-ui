@@ -21,12 +21,15 @@
     --button-border: var(--neutral-600);
     --button-color: #848d97;
 
-    &:hover {
+    &:hover:not(.pressed) {
       --button-background: #292e36;
     }
 
-    &:focus {
-      outline: 2px solid var(--blue-500);
+    &.pressed {
+      --button-border: transparent;
+      border-top: 3px solid #292e36;
+      position: relative;
+      overflow: hidden;
     }
   }
 }
