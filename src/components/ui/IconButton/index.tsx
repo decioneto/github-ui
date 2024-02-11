@@ -1,8 +1,8 @@
 import { MoreHorizontal } from 'lucide-react';
 import styles from './styles.module.scss';
-import { HTMLAttributes } from 'react';
+import { ComponentProps, HTMLAttributes } from 'react';
 
-interface IconButtonProps extends HTMLAttributes<HTMLButtonElement> {
+interface IconButtonProps extends ComponentProps<'button'> {
   variant: 'primary' | 'secondary' | 'outline' | 'danger' | 'invisible';
   size?: 'sm' | 'md' | 'lg';
   pressed?: boolean;
